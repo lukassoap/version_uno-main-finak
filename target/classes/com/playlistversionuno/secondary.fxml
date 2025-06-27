@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="480.0" prefWidth="480.0" spacing="20.0" style="-fx-background-color: ffe0ee;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.playlistversionuno.SecondaryController">
+    <children>
+      <AnchorPane prefHeight="501.0" prefWidth="471.0">
+         <children>
+              <Label layoutX="220.0" layoutY="26.0" text="Agregar O Eliminar Canciones">
+               <font>
+                  <Font name="Yu Gothic Bold" size="12.0" />
+               </font></Label>
+              <Button fx:id="secondaryButton" layoutX="14.0" layoutY="384.0" onAction="#switchToPrimary" style="-fx-background-color: fffbff;" text="Regresar">
+               <font>
+                  <Font name="Yu Gothic Bold" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.15">
+                     <color>
+                        <Color red="1.0" green="0.9098039269447327" blue="0.9960784316062927" />
+                     </color>
+                  </InnerShadow>
+               </effect></Button>
+            <ListView fx:id="listCanciones" layoutX="14.0" layoutY="77.0" prefHeight="299.0" prefWidth="158.0" style="-fx-background-color: fffbff;" />
+            <Label layoutX="20.0" layoutY="50.0" text="Listado de Canciones">
+               <font>
+                  <Font name="Yu Gothic Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="textIdEliminar" layoutX="202.0" layoutY="299.0" prefHeight="26.0" prefWidth="54.0" style="-fx-background-color: fffbff;">
+               <font>
+                  <Font name="Yu Gothic Regular" size="12.0" />
+               </font></TextField>
+            <Button layoutX="202.0" layoutY="334.0" mnemonicParsing="false" onAction="#eliminarCancion" style="-fx-background-color: fffbff;" text="Eliminar">
+               <font>
+                  <Font name="Yu Gothic Bold" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.15">
+                     <color>
+                        <Color red="1.0" green="0.9098039269447327" blue="0.9960784316062927" />
+                     </color>
+                  </InnerShadow>
+               </effect></Button>
+            <Button fx:id="btnRutaImagen" layoutX="313.0" layoutY="102.0" mnemonicParsing="false" onAction="#seleccionarImagen" prefHeight="23.0" prefWidth="98.0" style="-fx-background-color: fffbff;" text="Elegir Imagen">
+               <font>
+                  <Font name="Yu Gothic Regular" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.15">
+                     <color>
+                        <Color red="1.0" green="0.9098039269447327" blue="0.9960784316062927" />
+                     </color>
+                  </InnerShadow>
+               </effect></Button>
+            <Button fx:id="btnRutaCancion" layoutX="203.0" layoutY="101.0" mnemonicParsing="false" onAction="#seleccionarCancion" prefHeight="26.0" prefWidth="98.0" style="-fx-background-color: fffbff;" text="Elegir Audio">
+               <font>
+                  <Font name="Yu Gothic Regular" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.15">
+                     <color>
+                        <Color red="1.0" green="0.9098039269447327" blue="0.9960784316062927" />
+                     </color>
+                  </InnerShadow>
+               </effect></Button>
+            <Button layoutX="202.0" layoutY="214.0" mnemonicParsing="false" onAction="#agregarCancion" style="-fx-background-color: fffbff;" text="Agregar">
+               <font>
+                  <Font name="Yu Gothic Bold" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.15">
+                     <color>
+                        <Color red="1.0" green="0.9098039269447327" blue="0.9960784316062927" />
+                     </color>
+                  </InnerShadow>
+               </effect></Button>
+            <TextField fx:id="nombreCancionField" editable="false" layoutX="201.0" layoutY="173.0" prefHeight="26.0" prefWidth="215.0" style="-fx-background-color: f6eaf6;">
+               <font>
+                  <Font name="Yu Gothic Regular" size="12.0" />
+               </font></TextField>
+            <Label layoutX="202.0" layoutY="155.0" text="Nombre de la Canción:">
+               <font>
+                  <Font name="Yu Gothic Regular" size="12.0" />
+               </font></Label>
+            <Label layoutX="281.0" layoutY="59.0" text="Agregar">
+               <font>
+                  <Font name="Yu Gothic Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="202.0" layoutY="281.0" text="Índice:">
+               <font>
+                  <Font name="Yu Gothic Regular" size="12.0" />
+               </font></Label>
+            <Label layoutX="281.0" layoutY="263.0" text="Eliminar">
+               <font>
+                  <Font name="Yu Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="126.0" fitWidth="118.0" layoutX="307.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/hellokitty.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="37.0" fitWidth="46.0" layoutX="150.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../imagenes/hellokitty2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
